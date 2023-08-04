@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Robot Dashboard</title>
+    <title>RoverOps</title>
+    <link rel="stylesheet" href="/static/semantic-ui/semantic.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <script src="/static/js/jquery-3.7.0.min.js"></script>
+    <script src="/static/semantic-ui/semantic.min.js"></script>
     <script src="/static/js/main.js"></script>
+
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>RoverOps</h1>
+    <div class="ui fixed inverted menu" id="main-menu">
+        <a class="item" id="toggle-button">
+            <i class="content icon"></i>
+            <span>RoverOps</span>
+        </a>
+        <div class="right menu" id="main-menu-right">
+            <!-- Notifications Dropdown -->
+            <div class="ui simple dropdown item right" id="notification-dropdown">
+                <i class="bell icon"></i>
+                <span>Notifications</span>
+                <div class="menu" id="notifications">
+                    <!-- Add your notification items here -->
+                    <div class="item">Sample Notification 1</div>
+                    <div class="item">Sample Notification 2</div>
+                </div>
+            </div>
+            <!-- GitHub Link -->
+            <a class="item" href="https://github.com/jackarivera/RoverOps" target="_blank" id="github-link">
+                <i class="github icon"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="ui left vertical inverted sidebar labeled icon menu" id="sidebar">
+        <a class="item" href="#overview">
+            <i class="home icon"></i>
+            Robot Overview
+        </a>
+        <a class="item" href="#slam">
+            <i class="map layout icon"></i>
+            SLAM
+        </a>
+        <a class="item" href="#navigation">
+            <i class="compass outline icon"></i>
+            Navigation
+        </a>
+        <a class="item" href="#teleop">
+            <i class="keyboard icon"></i>
+            Teleop
+        </a>
+        <a class="item" href="#plugins">
+            <i class="plug icon"></i>
+            Plugins
+        </a>
+        <a class="item" href="#settings">
+            <i class="cog icon"></i>
+            Settings
+        </a>
+    </div>
+
+    <div class="pusher" id="main-content">
+        <!-- Your main content here -->
+        <h1>Welcome to RoverOps Dashboard</h1>
+    </div>
+
 </body>
 </html>

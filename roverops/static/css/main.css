@@ -1,0 +1,67 @@
+/* static/css/main.css */
+/* Your other custom styles here */
+
+/* Top Menu Bar */
+#main-menu {
+    background-color: #10253f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+#main-menu #github-link .icon {
+    margin-right: 0.5rem; /* Space between the icon and the text */
+    align-self: center;
+}
+
+#main-menu #main-menu-right span {
+    align-items: center;
+}
+
+#main-menu 
+
+#main-menu .item {
+    color: #fff;
+}
+
+/* Toggle Button Icon */
+#main-menu #toggle-button .content.icon:before {
+    content: '\f0c9';
+}
+
+#main-menu #toggle-button .content.icon.close:before {
+    content: '\f00d';
+}
+
+#main-menu #toggle-button span {
+    font-weight: bold;
+}
+
+/* Title Header */
+#main-menu #toggle-button {
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Sidebar */
+#sidebar {
+    background-color: #112d4e;
+    z-index: 999;
+}
+
+#sidebar .item,
+#sidebar .item .icon {
+    color: #fff;
+}
+
+
+
+/* Main Content */
+#main-content {
+    margin-top: 50px; /* Adjust based on the top menu height */
+    padding: 20px;
+    background: #f1f1f1;
+}
