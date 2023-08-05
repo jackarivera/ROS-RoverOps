@@ -25,3 +25,8 @@ RoverOps will implement a feature rich dashboard that is hosted locally on the r
 Used Libraries:
 - fastapi
 - uvicorn
+
+
+## Planned Framework
+
+![RoverOps Framework](https://github.com/jackarivera/RoverOps/tree/main/images/RoverOps_FrameWork.png)
