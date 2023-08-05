@@ -29,4 +29,4 @@ Used Libraries:
 
 ## Planned Framework
 
-![RoverOps Framework](https://github.com/jackarivera/RoverOps/blob/main/images/RoverOps_FrameWork.png?raw=true)
+![RoverOps Framework](https://github.com/jackarivera/RoverOps/blob/main/images/ro_framework.png?raw=true)
