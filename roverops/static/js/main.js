@@ -25,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function() {
         sidebar.sidebar('toggle');
     });
 
+    const themeToggleButton = $('#theme-toggle-button');
+    themeToggleButton.on("click", function() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            themeToggleButton.find('.icon').removeClass('sun').addClass('moon');  
+        } else {
+            document.documentElement.classList.add('dark');
+            themeToggleButton.find('.icon').removeClass('moon').addClass('sun');
+        }
+    });
+
     const pluginManager = new PluginManager();
     pluginManager.loadAll();
 

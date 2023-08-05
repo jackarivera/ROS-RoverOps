@@ -1,7 +1,43 @@
+/* Theme Colors */
+
+/* Default Theme */
+/* :root {
+    --main-menu-bg-color: #273647;
+    --menu-item-color: #fff;
+    --sidebar-bg-color: #112d4e;
+    --main-content-bg-color: #fff;
+    --main-content-text-color: #000000;
+} */
+
+:root {
+    --main-menu-bg-color: #1C3334; /* Dark blue */
+    --menu-item-color: #f6fcfb; /* Very light blue */
+    --sidebar-bg-color: #1C3334; /* Slightly light dark blue */
+    --main-content-bg-color: #f8f8f8; /* Dark gray */
+    --main-content-text-color: #070707; /* Off white, almost light gray color */
+}
+
+/* Dark Theme */
+/* :root.dark {
+    --main-menu-bg-color: #273341;
+    --menu-item-color: #fff;
+    --sidebar-bg-color: #112d4e;
+    --main-content-bg-color: #333333;
+    --main-content-text-color: #fff;
+} */
+
+:root.dark {
+    --main-menu-bg-color: #1C3334; /* Dark blue */
+    --menu-item-color: #f6fcfb; /* Very light blue */
+    --sidebar-bg-color: #1C3334; /* Slightly light dark blue */
+    --main-content-bg-color: #2F4454; /* Dark gray */
+    --main-content-text-color: #f6fcfb; /* Off white, almost light gray color */
+}
+
 /* Top Menu Bar */
 #main-menu {
     width: 100%;
-    background-color: #273647;
+    background-color: var(--main-menu-bg-color);
     font-weight: bold;
     z-index: 1000;
 }
@@ -22,7 +58,7 @@
 }
 
 #main-menu .item {
-    color: #fff;
+    color: var(--menu-item-color);
     
 }
 
@@ -58,7 +94,7 @@
 
 #sidebar {
     position: fixed;
-    background-color: #112d4e;
+    background-color: var(--sidebar-bg-color);
     margin-top: 0 !important; /* Make sure there's no top margin */
     padding-top: 0 !important; /* Make sure there's no top padding */
     border: none;
@@ -71,12 +107,17 @@
 #sidebar div .item,
 #sidebar .item,
 #sidebar .item .icon {
-    color: #fff;
+    color: var(--menu-item-color);
 }
 
 #sidebar div {
     width: 100%;
 }
 
-/* Main Container */
-
+/* Main Content */
+#main-content {
+    background-color: var(--main-content-bg-color);
+    color: var(--main-content-text-color);
+    padding: 1rem;
+    height: 100%;
+}
