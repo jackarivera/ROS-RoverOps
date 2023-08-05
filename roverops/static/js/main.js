@@ -1,26 +1,58 @@
 // static/js/main.js
+
+import PluginManager from './PluginManager.js';
+
 document.addEventListener("DOMContentLoaded", function() {
+
     const sidebar = $('#sidebar');
     const toggleButton = $('#toggle-button');
-    const sidebarMenuIcon = toggleButton.find('.icon'); // Correctly select the icon
+    const sidebarMenuIcon = toggleButton.find('.icon'); 
 
-    // Style the sidebar to have correct padding and width
     sidebar.css('width', toggleButton.outerWidth() + "px");
-    sidebar.css('paddingTop', $("#main-menu").outerHeight() + "px");
+    
 
-    // Initialize Semantic UI sidebar
     sidebar.sidebar({
-        dimPage: false, // Dont dim the content behind the sidebar
-        transition: 'push', // You can change this to a different transition, e.g. 'push', 'overlay', etc.
-        closable: false, // Allow the sidebar to be closed by clicking on the main content
-        // Add an event listener for when the sidebar is toggled
+        dimPage: false, 
+        transition: 'push', 
+        closable: false, 
         onChange: function() {
             sidebarMenuIcon.toggleClass('close');
-        }
+        },
+        context: $('#main-container'), 
     });
 
-    // Event listener for sidebar button
     toggleButton.on("click", function() {
         sidebar.sidebar('toggle');
     });
+
+    const pluginManager = new PluginManager();
+    pluginManager.loadAll();
+
+});
+
+$(document).ready(function() {
+    function updateContainerHeight() {
+        var topMenuHeight = $("#main-menu").outerHeight();
+        var bodyHeight = $("body").height();
+        var containerHeight = bodyHeight - topMenuHeight; 
+
+        $("#main-container").css('height', containerHeight + "px");
+    }
+
+    updateContainerHeight();
+    $(window).resize(updateContainerHeight);
+});
+
+$(document).ready(function() {
+    function updateSidebarHeight() {
+        var topMenuHeight = $("#main-menu").outerHeight();
+        var viewportHeight = $(window).height();
+        var settingMenuHeight = $("#sidebar-setting-menu").outerHeight();
+        var pluginMenuHeight = viewportHeight - topMenuHeight - settingMenuHeight;
+
+        $("#sidebar-plugin-menu").css('height', pluginMenuHeight + "px");
+    }
+
+    updateSidebarHeight();
+    $(window).resize(updateSidebarHeight);
 });

@@ -26,6 +26,13 @@ Used Libraries:
 - fastapi
 - uvicorn
 
+Run uvicorn server manually
+```
+uvicorn roverops_server:app --host 0.0.0.0
+```
+
+Then connect in your browser with localhost:8000
+
 
 ## Planned Framework
 

@@ -1,12 +1,15 @@
-/* static/css/main.css */
-/* Your other custom styles here */
-
 /* Top Menu Bar */
 #main-menu {
-    background-color: #10253f;
-    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: #273647;
     font-weight: bold;
     z-index: 1000;
+}
+
+#main-menu, #main-container {
+    margin: 0 !important;
+    border: none;
+    border-radius: 0;
 }
 
 #main-menu #github-link .icon {
@@ -18,10 +21,9 @@
     align-items: center;
 }
 
-#main-menu 
-
 #main-menu .item {
     color: #fff;
+    
 }
 
 /* Toggle Button Icon */
@@ -45,23 +47,36 @@
     align-items: center;
 }
 
-
 /* Sidebar */
-#sidebar {
-    background-color: #112d4e;
-    z-index: 999;
+#sidebar-plugin-menu {
+    overflow-y: auto; 
 }
 
+#sidebar-setting-menu {
+    width: 100%;
+}
+
+#sidebar {
+    position: fixed;
+    background-color: #112d4e;
+    margin-top: 0 !important; /* Make sure there's no top margin */
+    padding-top: 0 !important; /* Make sure there's no top padding */
+    border: none;
+}
+
+#main-container .pusher {
+    min-height: calc(100vh - 150px);
+}
+
+#sidebar div .item,
 #sidebar .item,
 #sidebar .item .icon {
     color: #fff;
 }
 
-
-
-/* Main Content */
-#main-content {
-    margin-top: 50px; /* Adjust based on the top menu height */
-    padding: 20px;
-    background: #f1f1f1;
+#sidebar div {
+    width: 100%;
 }
+
+/* Main Container */
+
