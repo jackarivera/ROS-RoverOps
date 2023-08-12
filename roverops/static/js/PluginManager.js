@@ -26,6 +26,7 @@ class PluginManager {
     const sidebar = document.getElementById('sidebar-plugin-menu');
     const item = document.createElement('a');
     item.className = 'item';
+    item.id = plugin.getID();
     item.href = plugin.getHref();
     item.innerHTML = `<i class="${plugin.getIcon()}"></i>${plugin.getName()}`;
     sidebar.appendChild(item);
@@ -37,6 +38,11 @@ class PluginManager {
     pluginList.forEach((plugin) => {
       this.register(plugin);
     });
+  }
+
+  // Get a plugin by their id
+  getPlugin(pluginName) {
+    return this.plugins.get(pluginName);
   }
 }
 

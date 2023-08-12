@@ -12,6 +12,9 @@ export default class RobotOverviewPlugin {
     getHref() {
       return "#overview";
     }
+    getID() {
+      return "robot-overview"
+    }
     getSidebarElement() {
         return true;
     }

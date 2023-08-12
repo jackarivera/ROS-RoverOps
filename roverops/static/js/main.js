@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const pluginManager = new PluginManager();
     pluginManager.loadAll();
 
+    $("#robot-overview").addClass("active");
+
+
 });
 
 $(document).ready(function() {
@@ -88,3 +91,25 @@ $(document).ready(function() {
     $(window).resize(updateSidebarHeight);
 });
 
+window.onload = async function() {
+    try {
+        // Fetch topics from the FastAPI endpoint
+        let response = await fetch('/list_ros_topics');
+        let data = await response.json();
+        
+        // Process the list of topics
+        let topics = data.topics;
+        let tableBody = document.querySelector("#topic-table-body");
+        
+        for (let [topic, types] of Object.entries(topics)) {
+            let row = tableBody.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            
+            cell1.textContent = topic;
+            cell2.textContent = types.join(", ");
+        }
+    } catch (error) {
+        console.error("There was an error fetching the ROS topics:", error);
+    }
+}

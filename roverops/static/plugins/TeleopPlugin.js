@@ -12,6 +12,9 @@ export default class TeleopPlugin {
     getHref() {
       return "#teleop";
     }
+    getID() {
+      return "teleop-plugin"
+    }
     getSidebarElement() {
         return true;
     }

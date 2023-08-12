@@ -12,6 +12,9 @@ export default class SLAMPlugin {
     getHref() {
       return "#slam";
     }
+    getID() {
+      return "slam-plugin"
+    }
     getSidebarElement() {
         return true;
     }

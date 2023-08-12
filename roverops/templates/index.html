@@ -51,7 +51,7 @@
             <div class="ui secondary vertical menu labeled icon top fluid" id="sidebar-plugin-menu">
             </div>
             <div class="ui secondary vertical menu labeled icon bottom fixed" id="sidebar-setting-menu">
-                <a class="active item" href="#plugins">
+                <a class="item" href="#plugins">
                     <i class="plug icon"></i>
                     Plugins
                 </a>
@@ -61,9 +61,21 @@
                 </a>
             </div>
         </div>
+
         <div class="pusher" id="main-content">
-            <h1>Welcome to RoverOps Dashboard</h1>
-        </div>
+        <h1>Welcome to RoverOps Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="topic-table-body">
+                <!-- Rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
     </div>
  
 </body>

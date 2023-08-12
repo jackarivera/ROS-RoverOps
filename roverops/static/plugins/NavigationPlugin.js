@@ -12,6 +12,9 @@ export default class NavigationPlugin {
     getHref() {
       return "#navigation";
     }
+    getID() {
+      return "navigation-plugin"
+    }
     getSidebarElement() {
         return true;
     }
